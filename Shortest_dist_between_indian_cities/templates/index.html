@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>City Map</title>
+   
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(65, 42, 240);
+        margin: 3em;
+        padding: 0;
+        text-align : center;
+        }
+
+/* Style for the form container */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for labels and select elements */
+label, select {
+    display: block;
+    margin: 10px 0;
+    text-align: left;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the "GO to Map" button */
+form[action="showMap"] input[type="submit"] {
+    background-color: #28a745;
+}
+
+form[action="showMap"] input[type="submit"]:hover {
+    background-color: #1e7e34;
+}
+
+    </style>
+</head>
+<body>
+    <form method="post">
+        <label for="city1">Select City 1:</label>
+        <select name="city1" id="city1">
+            <option value="raipur">Raipur</option>
+            <option value="hyderabad">Hyderabad</option>
+            <option value="madurai">Madurai</option>
+            <option value="faridabad">Faridabad</option>
+            <option value="kota">Kota</option>
+            <option value="bhopal">Bhopal</option>
+            <option value="kolkata">Kolkata</option>
+            <option value="kanpur">Kanpur</option>
+            <option value="vadodara">Vadodara</option>
+            <option value="gurgoan">Gurugram</option>
+            <option value="noida">Noida</option>
+            <option value="thane">Thane</option>
+            <option value="jalandhar">Jalandhar</option>
+            <option value="bengaluru">Bengaluru</option>
+            <option value="chandigarh">Chandigarh</option>
+            <option value="surat">Surat</option>
+            <option value="jamshedpur">Jamshedpur</option>
+            <option value="pune">Pune</option>
+            <option value="ghaziabad">Ghaziabad</option>
+            <option value="coimbatore">Coimbatore</option>
+            <option value="vishakhapatnam">Visakhapatnam</option>
+            <option value="salem">Salem</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="vijayawada">Vijayawada</option>
+            <option value="lucknow">Lucknow</option>
+            <option value="patna">Patna</option>
+            <option value="aligarh">Aligarh</option>
+            <option value="ranchi">Ranchi</option>
+            <option value="ludhiana">Ludhiana</option>
+            <option value="mysore">Mysore</option>
+            <option value="guntur">Guntur</option>
+            <option value="rajkot">Rajkot</option>
+            <option value="guwahati">Guwahati</option>
+            <option value="amritsar">Amritsar</option>
+            <option value="indore">Indore</option>
+            <option value="jaipur">Jaipur</option>
+            <option value="warangal">Warangal</option>
+            <option value="new delhi">New Delhi</option>
+            <option value="agra">Agra</option>
+            <option value="meerut">Meerut</option>
+            <option value="jodhpur">Jodhpur</option>
+            <option value="moradabad">Moradabad</option>
+            <option value="varanasi">Varanasi</option>
+            <option value="ahmadabad">Ahmedabad</option>
+            <option value="bhubaneshwar">Bhubaneswar</option>
+            <option value="chennai">Chennai</option>
+            <option value="kochi">Kochi</option>
+            <option value="nagpur">Nagpur</option>
+            <option value="dehra dun">Dehradun</option>
+            <option value="allahabad">Allahabad</option>
+        </select>
+        <br>
+        <label for="city2">Select City 2:</label>
+        <select name="city2" id="city2">
+            <option value="raipur">Raipur</option>
+            <option value="hyderabad">Hyderabad</option>
+            <option value="madurai">Madurai</option>
+            <option value="faridabad">Faridabad</option>
+            <option value="kota">Kota</option>
+            <option value="bhopal">Bhopal</option>
+            <option value="kolkata">Kolkata</option>
+            <option value="kanpur">Kanpur</option>
+            <option value="vadodara">Vadodara</option>
+            <option value="gurgoan">Gurugram</option>
+            <option value="noida">Noida</option>
+            <option value="thane">Thane</option>
+            <option value="jalandhar">Jalandhar</option>
+            <option value="bengaluru">Bengaluru</option>
+            <option value="chandigarh">Chandigarh</option>
+            <option value="surat">Surat</option>
+            <option value="jamshedpur">Jamshedpur</option>
+            <option value="pune">Pune</option>
+            <option value="ghaziabad">Ghaziabad</option>
+            <option value="coimbatore">Coimbatore</option>
+            <option value="vishakhapatnam">Visakhapatnam</option>
+            <option value="salem">Salem</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="vijayawada">Vijayawada</option>
+            <option value="lucknow">Lucknow</option>
+            <option value="patna">Patna</option>
+            <option value="aligarh">Aligarh</option>
+            <option value="ranchi">Ranchi</option>
+            <option value="ludhiana">Ludhiana</option>
+            <option value="mysore">Mysore</option>
+            <option value="guntur">Guntur</option>
+            <option value="rajkot">Rajkot</option>
+            <option value="guwahati">Guwahati</option>
+            <option value="amritsar">Amritsar</option>
+            <option value="indore">Indore</option>
+            <option value="jaipur">Jaipur</option>
+            <option value="warangal">Warangal</option>
+            <option value="new delhi">New Delhi</option>
+            <option value="agra">Agra</option>
+            <option value="meerut">Meerut</option>
+            <option value="jodhpur">Jodhpur</option>
+            <option value="moradabad">Moradabad</option>
+            <option value="varanasi">Varanasi</option>
+            <option value="ahmadabad">Ahmedabad</option>
+            <option value="bhubaneshwar">Bhubaneswar</option>
+            <option value="chennai">Chennai</option>
+            <option value="kochi">Kochi</option>
+            <option value="nagpur">Nagpur</option>
+            <option value="dehra dun">Dehradun</option>
+            <option value="allahabad">Allahabad</option>
+        </select>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="showMap">
+        <input type="submit" value="GO to Map">
+    </form>
+</body>
+</html>
